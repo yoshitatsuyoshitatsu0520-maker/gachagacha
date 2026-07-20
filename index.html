@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>ガチャガチャを回そう</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div id="credit">
+
+        制作：伊藤ロドリゲス
+
+</div>
+
+    <!-- タイトル -->
+
+    <h1>ガチャガチャを回そう</h1>
+
+
+    <!-- ガチャ画像 -->
+
+    <div id="gachaArea">
+
+    <img
+        src="images/gacha.jpg"
+        alt="ガチャガチャ"
+        id="gacha">
+
+    <button
+        id="spinButton"
+        class="gameButton">
+
+        回す
+
+    </button>
+
+</div>
+
+
+    <!-- コンプリート率 -->
+
+    <div id="completeRate">
+
+        コンプリート率
+        <br>
+        0 / 0
+        <br>
+        0%
+
+    </div>
+
+
+    <!-- 図鑑ボタン -->
+<div id="rightMenu">
+
+    <button
+        id="collectionButton"
+        class="gameButton">
+
+        図鑑
+
+    </button>
+
+    <button
+        id="resetButton"
+        class="gameButton">
+
+        🗑️ リセット
+
+    </button>
+
+</div>
+
+
+    <!-- =======================
+         GETパネル
+    ======================== -->
+
+    <div
+        id="resultPanel"
+        class="popup">
+
+        <div id="newBadge">
+
+    NEW!
+
+</div>
+
+
+
+        <h2 id="resultTitle">
+
+            GET!!
+
+        </h2>
+<div id="rankText"></div>
+        <img id="prizeImage">
+
+        <p id="prizeName"></p>
+
+        <p id="completeMessage"></p>
+
+        <button
+            id="closeButton"
+            class="gameButton">
+
+            OK
+
+        </button>
+
+    </div>
+
+
+    <!-- =======================
+         図鑑
+    ======================== -->
+
+    <div
+        id="collectionPanel"
+        class="popup">
+
+        <h2 id="collectionTitle">
+
+            コレクション
+
+        </h2>
+
+
+        <!-- JavaScriptがここに追加する -->
+
+        <div id="collectionList">
+
+        </div>
+
+
+        <button
+            id="collectionClose"
+            class="gameButton">
+
+            閉じる
+
+        </button>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

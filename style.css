@@ -1,0 +1,517 @@
+/*==========================
+    全体
+==========================*/
+
+body{
+
+    text-align:center;
+
+    font-family:sans-serif;
+
+    background:#8FD8FF;
+
+    background-image:
+
+        radial-gradient(
+    rgba(255,255,255,0.7) 22%,
+    transparent 24%
+),
+
+        radial-gradient(
+    rgba(255,255,255,0.7) 22%,
+    transparent 24%
+);
+
+    background-size:60px 60px;
+
+    background-position:
+        0 0,
+        30px 30px;
+
+}
+
+/*==========================
+    タイトル
+==========================*/
+
+h1{
+
+    margin-top:5px;
+
+    font-size:50px;
+
+    color:#ff4444;
+
+    text-shadow:
+    -2px -2px white,
+     2px -2px white,
+    -2px  2px white,
+     2px  2px white,
+     5px  5px black;
+
+}
+
+
+/*==========================
+    ガチャ
+==========================*/
+
+#gacha{
+
+    width:300px;
+
+    margin-top:-10px;
+
+}
+
+
+/*==========================
+    共通ボタン
+==========================*/
+
+.gameButton{
+
+    background:#FFD400;
+
+    color:black;
+
+    border:3px solid black;
+
+    font-size:24px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+.gameButton:hover{
+
+    background:#FFC000;
+
+}
+
+.gameButton:active{
+
+    transform:translateY(3px);
+
+}
+
+#spinButton{
+
+    margin-top:20px;
+
+    width:140px;
+
+    height:70px;
+
+}
+
+#spinButton:disabled{
+
+    background:#999;
+
+    color:white;
+
+    cursor:not-allowed;
+
+}
+@keyframes shake{
+
+    0%{transform:translateX(0);}
+    20%{transform:translateX(-10px);}
+    40%{transform:translateX(10px);}
+    60%{transform:translateX(-10px);}
+    80%{transform:translateX(10px);}
+    100%{transform:translateX(0);}
+
+}
+
+.shake{
+
+    animation:shake 0.5s infinite;
+
+}
+
+/*==========================
+    パネル共通
+==========================*/
+
+.popup{
+
+    position:fixed;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    background:white;
+
+    border:4px solid black;
+
+    border-radius:12px;
+
+    padding:20px;
+
+    text-align:center;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.4);
+
+    transition:.5s;
+
+}
+
+
+/*==========================
+    GETパネル
+==========================*/
+
+#resultPanel{
+
+    top:-1000px;
+
+    left:50%;
+
+    transform:translate(-50%, -50%);
+
+    width:420px;
+
+    z-index:100;
+
+}
+#resultTitle{
+
+    font-size:40px;
+
+    margin:0;
+
+    color:#ff4444;
+
+    text-shadow:
+    -2px -2px white,
+     2px -2px white,
+    -2px  2px white,
+     2px  2px white,
+     4px  4px black;
+
+}
+
+#prizeImage{
+
+    width:180px;
+
+    margin:8px 0;
+
+}
+#prizeName{
+
+    margin:6px 0;
+
+    font-size:28px;
+
+    font-weight:bold;
+
+}
+#closeButton{
+
+    margin-top:8px;
+
+    width:180px;
+
+    height:55px;
+
+}
+
+/*==========================
+    コンプリート率
+==========================*/
+
+#completeRate{
+
+    position:fixed;
+
+    left:20px;
+
+    bottom:20px;
+
+    width:180px;
+
+    background:white;
+
+    border:3px solid black;
+
+    border-radius:12px;
+
+    padding:15px;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+    box-shadow:0 8px 15px rgba(0,0,0,.3);
+
+}
+
+
+/*==========================
+    図鑑ボタン
+==========================*/
+
+#collectionButton{
+
+
+    width:140px;
+
+    height:60px;
+
+}
+
+
+/*==========================
+    図鑑
+==========================*/
+#collectionPanel{
+
+    top:-650px;
+
+    width:500px;
+
+    max-width:90vw;
+
+    height:500px;
+
+    z-index:200;
+
+}
+#collectionTitle{
+
+    margin-top:0;
+
+    font-size:40px;
+
+    color:#ff4444;
+
+    text-shadow:
+    -2px -2px white,
+     2px -2px white,
+    -2px  2px white,
+     2px  2px white,
+     4px  4px black;
+
+}
+
+
+/*==========================
+    図鑑一覧
+==========================*/
+
+#collectionList{
+
+    margin-top:20px;
+
+    height:320px;
+
+    overflow-y:auto;
+
+    padding-right:10px;
+
+}
+
+.collectionItem{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:12px;
+
+    padding:15px;
+
+    background:#FFF8DC;
+
+    border:3px solid black;
+
+    border-radius:10px;
+
+    font-size:22px;
+
+}
+
+.collectionItem img{
+
+    width:60px;
+
+    height:60px;
+
+    object-fit:cover;
+
+}
+
+
+/*==========================
+    閉じる
+==========================*/
+
+#collectionClose{
+
+    width:180px;
+
+    height:55px;
+
+    margin-top:15px;
+
+}
+
+#gachaArea{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+#completeMessage{
+
+    display:none;
+
+    margin:6px 0;
+
+    padding:6px;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    color:#ffcc00;
+
+    text-shadow:
+        2px 2px black;
+
+}
+
+#newBadge{
+
+    position:absolute;
+
+    top:18px;
+
+    left:-45px;
+
+    width:150px;
+
+    text-align:center;
+
+    background:#ff4444;
+
+    color:white;
+
+    font-size:28px;
+
+    font-weight:bold;
+
+    transform:rotate(-45deg);
+
+    box-shadow:0 3px 8px rgba(0,0,0,.3);
+
+    display:none;
+
+    animation:newPop .5s;
+
+    overflow:visible;
+
+    z-index:1000;
+
+    border:3px solid white;
+letter-spacing:2px;
+text-shadow:2px 2px 3px black;
+
+}
+
+@keyframes newPop{
+
+    0%{
+
+        transform:
+        rotate(-45deg)
+        scale(0);
+
+    }
+
+    70%{
+
+        transform:
+        rotate(-45deg)
+        scale(1.2);
+
+    }
+
+    100%{
+
+        transform:
+        rotate(-45deg)
+        scale(1);
+
+    }
+
+}
+
+#rightMenu{
+
+    position:fixed;
+
+    right:20px;
+
+    bottom:20px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+    align-items:flex-end;
+
+}
+
+
+
+#credit{
+
+    position:fixed;
+
+    top:15px;
+
+    left:15px;
+
+    font-size:18px;
+
+    color:white;
+
+    font-weight:bold;
+
+    text-shadow:
+        2px 2px 3px rgba(0,0,0,.4);
+
+    opacity:0.8;
+
+    user-select:none;
+
+}
+
+#rankText{
+
+    font-size:40px;
+
+    font-weight:bold;
+
+    margin-bottom:10px;
+
+    display:none;
+
+}
